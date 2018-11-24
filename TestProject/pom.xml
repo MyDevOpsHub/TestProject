@@ -5,8 +5,9 @@
 	<groupId>TestProject</groupId>
 	<artifactId>TestProject</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
 	<build>
-		<sourceDirectory>src</sourceDirectory>
+		<!-- <sourceDirectory>src</sourceDirectory> -->
 		<plugins>
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
@@ -14,6 +15,13 @@
 				<configuration>
 					<source>1.8</source>
 					<target>1.8</target>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>exec-maven-plugin</artifactId>
+				<configuration>
+					<mainClass>com.git.demo.GitDemo</mainClass>
 				</configuration>
 			</plugin>
 		</plugins>
